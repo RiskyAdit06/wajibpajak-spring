@@ -47,13 +47,13 @@ Pastikan Anda berada di direktori hasil clone sebelum melakukan build atau menja
    ```
    atau
    ```bash
-   ./mvnw clean install
+   ./mvn clean install
    ```
    Keduanya bisa dipakai, namun untuk keperluan lokal `clean package` saja sudah cukup.
 
 4. **Menjalankan aplikasi**
    ```bash
-   ./mvnw spring-boot:run
+   ./mvn spring-boot:run
    ```
    Setelah berhasil jalan, API akan tersedia di `http://localhost:8080`.
 
