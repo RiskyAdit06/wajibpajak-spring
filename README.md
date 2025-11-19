@@ -20,6 +20,18 @@ Pastikan Anda berada di direktori hasil clone sebelum melakukan build atau menja
 - Global exception handler dengan HTTP status yang sesuai.
 - Database H2 in-memory (konsol di `/h2-console`) untuk uji cepat.
 
+## Daftar Endpoint
+
+Berikut daftar endpoint (API endpoints) yang tersedia pada aplikasi ini:
+
+| Method | Endpoint                       | Keterangan                      |
+|--------|------------------------------- |----------------------------------|
+| GET    | `/api/wajib-pajak`             | Mendapatkan daftar seluruh Wajib Pajak |
+| GET    | `/api/wajib-pajak/{id}`        | Mendapatkan detail Wajib Pajak berdasarkan ID |
+| POST   | `/api/wajib-pajak`             | Membuat data Wajib Pajak baru    |
+| PUT    | `/api/wajib-pajak/{id}`        | Memperbarui data Wajib Pajak berdasarkan ID |
+| DELETE | `/api/wajib-pajak/{id}`        | Menghapus data Wajib Pajak berdasarkan ID |
+
 ## Teknologi
 - Java 17
 - Spring Boot 3.4.11 (Web, Data JPA, Validation)
@@ -64,6 +76,9 @@ Pastikan Anda berada di direktori hasil clone sebelum melakukan build atau menja
 
 6. **Cek endpoint API**  
    Gunakan Postman, Insomnia, curl, dsb. Contoh: lihat di bagian "Contoh Request Create" di bawah.
+
+   Atau bisa juga import di Postman menggunakan file koleksi berikut:  
+   **Wajib Pajak.postman_collection.json**
 
 ## Konfigurasi
 File `src/main/resources/application.properties` mengatur koneksi database H2, perilaku JPA (`ddl-auto=update`), penayangan query (`show-sql`), dan port server. Sesuaikan sesuai kebutuhan environment.

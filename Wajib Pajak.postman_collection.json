@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "046173b8-8cd3-4497-9024-1bf95bf3c4ca",
+		"name": "Wajib Pajak",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19171960"
+	},
+	"item": [
+		{
+			"name": "Get Wajib Pajak",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTc2MjgzNTYxMywiZXhwIjoxNzYyODM5MjEzLCJuYmYiOjE3NjI4MzU2MTMsImp0aSI6Ikk0d3JJeHNDNUtyUTVMaWQiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.VrYQTrSEyiYyR5mV_Fk0Tfl1I9PoHshLSKaYAQPwivw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/wajib-pajak?page=0&size=5",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"wajib-pajak"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Wajib Pajak By Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTc2MjgzNTYxMywiZXhwIjoxNzYyODM5MjEzLCJuYmYiOjE3NjI4MzU2MTMsImp0aSI6Ikk0d3JJeHNDNUtyUTVMaWQiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.VrYQTrSEyiYyR5mV_Fk0Tfl1I9PoHshLSKaYAQPwivw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/wajib-pajak/{{id}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"wajib-pajak",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tambah Wajib Pajak",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama\": \"Joko Santoso\",\r\n    \"npwpd\": \"6578990088339239\",\r\n    \"alamat\": \"Jl. Merdeka No.12, Surabaya\",\r\n    \"jenisUsaha\": \"Resto Enak7\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/wajib-pajak",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"wajib-pajak"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Wajib Pajak",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama\": \"Budi Santoso Tes Update\",\r\n    \"npwpd\": \"1234567890101789\",\r\n    \"alamat\": \"Jl. Merdeka No.10, Jakarta\",\r\n    \"jenisUsaha\": \"Hotel Merdeka Update\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/wajib-pajak/{{id}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"wajib-pajak",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Wajib Pajak",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/wajib-pajak/{{id}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"wajib-pajak",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
